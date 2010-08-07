@@ -1,1 +1,27 @@
 A to mój plik sprawdzaj¹cy
+
+Dobra, teraz dalej w ramach testu, acz trochê powazniej.
+
+mam kilka pytañ:
+1) jaki typ uC bêdziemy u¿ywaæ. Najlepszy, myœlê, by³by taki który mo¿na sci¹gn¹æ jako sampel z Texasa ;-). nie mam zbyt wielkiego doœwiadczenia w teksasie wiêc decyzjê pozostawiê chyba tobie.
+jedyne moje uwagi odnoœcie uC to:
+	- na LCD musimy miec co najlmniej 6 I/O
+	- czujnik(i) temperatury to da kolejne I/O (czujnik cyfrowy) lub ADC
+	- LED (jakas diodka mo¿e by siê sprzyda³a) 1 I/O
+	- przyciski regulacji 2 (4) I/O
+	- wyjœcei do lampogrzalki 1? I/O
+	- wiatrak mo¿e jakiœ (nie jestem pewien czy potrzebujemy, no ale mo¿e) 1 I/O
+	- czujnik wilgoci  1 ADC
+
+Czyli oko³o 14 I/O, 3 ADC
+
+2)Co do "development enviroment" czy jakoœ tak, to hymmm nie mam nic ciekawego do napisania (zak³adam ¿e moje poprzednie uwagi by³y ciekawe hi hi hi)
+Sprawdziê³m jak narazie tylko CodeComposer Studio. Kurcze, jakoœ brakuje mi symulatora.
+
+3)Program do PCB
+Ja u¿ywam KiCAD-a. Ma pewne ograniczenia, acz ma równiez zalety. Totalnie darmowy. Bardzo prosty w obs³udze (mo¿e to byæ zreszt¹ zarówno zaleta jak i wad¹).
+Jakiego pograma Ty u¿ywasz?? Zawsze mogê poznac coœ nowego :-)
+
+
+
+
