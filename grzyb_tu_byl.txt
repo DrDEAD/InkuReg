@@ -1,6 +1,6 @@
-A to mój plik sprawdzaj¹cy
+A to moj plik sprawdzajacy
 
-Dobra, teraz dalej w ramach testu, acz trochê powazniej.
+Dobra, teraz dalej w ramach testu, acz troche powazniej.
 
 mam kilka pytañ:
 1) jaki typ uC bêdziemy u¿ywaæ. Najlepszy, myœlê, by³by taki który mo¿na sci¹gn¹æ jako sampel z Texasa ;-). nie mam zbyt wielkiego doœwiadczenia w teksasie wiêc decyzjê pozostawiê chyba tobie.
