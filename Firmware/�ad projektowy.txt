@@ -1,0 +1,19 @@
+#  Variables
+
+    * Variables of type char are prefixed c
+    * Variables of type short are prefixed s
+    * Variables of type long are prefixed l
+    * Variables of type float are prefixed f
+    * Variables of type double are prefixed d
+    * Enumerated variables are prefixed e
+    * Other types (e.g. structs) are prefixed x
+    * Pointers have an additional prefixed p, for example a pointer to a short will have prefix ps
+    * Unsigned variables have an additional prefixed u, for example an unsigned short will have prefix us
+
+# Functions
+
+    * File private functions are prefixed with prv
+    * API functions are prefixed with their return type, as per the convention defined for variables
+    * Function names start with the file in which they are defined. For example vTaskDelete is defined in Task. c
+
+Zapo¿yczony z www.freeRTOS.org
