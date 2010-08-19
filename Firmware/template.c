@@ -4,7 +4,7 @@
 **
 **      Project     : InkuReg
 **
-**      Component   : CPU (MSP430F249)
+**      Component   : CPU (MSP430F2149)
 **
 **      Modulename  : System
 **
