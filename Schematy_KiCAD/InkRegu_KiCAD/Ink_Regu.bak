@@ -1,0 +1,596 @@
+EESchema Schematic File Version 2  date 2010-08-27 00:04:03
+LIBS:power,Moje_Filtry_EMC,Moje_Tyryst_Triack,Moje_ZC_Opto_Triack_Driver,Moje_Tranz_NPN,Moje_TRAFO,Moje_Texas_MSP,Moje_SWITCZE,MOJE_STEROW_TRIAK,Moje_Stabilizatory_U,Moje_Rail_To_Rail,Moje_Optocou,Moje_OPAM,Moje_LCD,Moje_Komparat,Moje_Klawiatura,Moje_GENERAL,Moje_Czujniki_Temp,Moje_CONNECTORY,Moje_Tranz_PNP,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,.\Ink_Regu.cache
+EELAYER 24  0
+EELAYER END
+$Descr A4 11700 8267
+Sheet 1 4
+Title ""
+Date "23 aug 2010"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 3800 1050 2150 250 
+U 4C76CFF4
+F0 "Obwod_Wykonawczy_Mocy" 60
+F1 "Ink_Reg_Obw_Wyk_Mocy.sch" 60
+$EndSheet
+Wire Notes Line
+	1175 2875 3500 2875
+Wire Notes Line
+	3500 2875 3500 7100
+Wire Notes Line
+	1175 7100 3500 7100
+Wire Notes Line
+	1175 2875 1175 7100
+Wire Wire Line
+	2400 6125 2400 6200
+Wire Wire Line
+	2725 5800 2825 5800
+Wire Wire Line
+	2150 5875 2150 5950
+Wire Wire Line
+	2450 3875 2450 3925
+Wire Wire Line
+	5300 6425 5425 6425
+Wire Wire Line
+	5300 6325 5375 6325
+Wire Wire Line
+	5375 6600 5375 6525
+Wire Wire Line
+	5375 6325 5375 6250
+Wire Wire Line
+	5375 6525 5300 6525
+Wire Wire Line
+	5300 5775 5425 5775
+Wire Wire Line
+	5300 5675 5375 5675
+Wire Wire Line
+	5375 5950 5375 5875
+Wire Wire Line
+	2300 3875 2300 4200
+Wire Wire Line
+	2375 3875 2375 4200
+Wire Wire Line
+	8075 4350 8075 4325
+Wire Wire Line
+	8075 4325 8175 4325
+Wire Wire Line
+	8075 4625 8175 4625
+Wire Wire Line
+	8075 4025 8175 4025
+Wire Wire Line
+	9425 4325 9525 4325
+Wire Wire Line
+	9425 4225 9525 4225
+Wire Wire Line
+	9425 4125 9525 4125
+Wire Wire Line
+	9425 4025 9525 4025
+Wire Wire Line
+	9375 2225 9375 1950
+Wire Wire Line
+	9375 1950 9450 1950
+Wire Wire Line
+	8750 1050 8750 1000
+Wire Wire Line
+	8750 1250 8750 1300
+Wire Wire Line
+	8450 1250 8450 1300
+Wire Wire Line
+	8450 1050 8450 1000
+Wire Wire Line
+	9450 1550 9250 1550
+Wire Wire Line
+	9450 1650 9250 1650
+Wire Wire Line
+	9450 1750 9250 1750
+Wire Wire Line
+	9450 1850 9250 1850
+Wire Wire Line
+	9450 2050 9100 2050
+Wire Wire Line
+	9700 1750 9825 1750
+Wire Wire Line
+	8175 4125 8075 4125
+Wire Wire Line
+	2525 3875 2525 3925
+Wire Wire Line
+	2225 3875 2225 4200
+Wire Wire Line
+	2150 3875 2150 4200
+Wire Wire Line
+	1700 3875 1700 4200
+Wire Wire Line
+	1625 3875 1625 4200
+Wire Wire Line
+	1550 3875 1550 4200
+Wire Wire Line
+	1775 3875 1775 4200
+Wire Wire Line
+	1400 3875 1400 3925
+Wire Wire Line
+	1475 3875 1475 3975
+Wire Wire Line
+	5375 5675 5375 5600
+Wire Wire Line
+	5375 5875 5300 5875
+Wire Wire Line
+	2175 4650 2250 4650
+Wire Wire Line
+	2175 4750 2250 4750
+Wire Wire Line
+	2175 4850 2250 4850
+Wire Wire Line
+	2175 4950 2250 4950
+Wire Wire Line
+	1525 5425 1450 5425
+Wire Wire Line
+	2075 5425 2150 5425
+Wire Wire Line
+	1775 5425 1875 5425
+Wire Wire Line
+	1450 5425 1450 5350
+Wire Wire Line
+	2150 5425 2150 5575
+Wire Wire Line
+	2325 5800 2475 5800
+Wire Wire Line
+	2400 5875 2400 5800
+Connection ~ 2400 5800
+Wire Wire Line
+	2400 6825 2400 6900
+Wire Wire Line
+	2725 6500 2825 6500
+Wire Wire Line
+	2150 6575 2150 6650
+Wire Wire Line
+	1525 6125 1450 6125
+Wire Wire Line
+	2075 6125 2150 6125
+Wire Wire Line
+	1775 6125 1875 6125
+Wire Wire Line
+	1450 6125 1450 6050
+Wire Wire Line
+	2150 6125 2150 6275
+Wire Wire Line
+	2325 6500 2475 6500
+Wire Wire Line
+	2400 6575 2400 6500
+Connection ~ 2400 6500
+Text Label 2825 6500 0    40   ~ 0
+MSP_RED
+$Comp
+L GND #PWR?
+U 1 1 4C761294
+P 2400 6900
+F 0 "#PWR?" H 2400 6900 30  0001 C CNN
+F 1 "GND" H 2400 6830 30  0001 C CNN
+	1    2400 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L REZ R?
+U 1 1 4C761293
+P 2400 6700
+F 0 "R?" H 2400 6750 35  0000 C CNN
+F 1 "REZ" H 2400 6650 35  0000 C CNN
+	1    2400 6700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L REZ R?
+U 1 1 4C761292
+P 2600 6500
+F 0 "R?" H 2600 6550 35  0000 C CNN
+F 1 "REZ" H 2600 6450 35  0000 C CNN
+	1    2600 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4C761291
+P 2150 6650
+F 0 "#PWR?" H 2150 6650 30  0001 C CNN
+F 1 "GND" H 2150 6580 30  0001 C CNN
+	1    2150 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L 2N7002 Q?
+U 1 1 4C761290
+P 2175 6425
+F 0 "Q?" H 2300 6475 40  0000 C CNN
+F 1 "2N7002" H 2375 6375 40  0000 C CNN
+	1    2175 6425
+	-1   0    0    -1  
+$EndComp
+$Comp
+L VAA #PWR?
+U 1 1 4C76128F
+P 1450 6050
+F 0 "#PWR?" H 1450 6250 40  0001 C CNN
+F 1 "VAA" H 1450 6200 40  0000 C CNN
+	1    1450 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L REZ R?
+U 1 1 4C76128E
+P 1650 6125
+F 0 "R?" H 1650 6175 35  0000 C CNN
+F 1 "330" H 1650 6075 35  0000 C CNN
+	1    1650 6125
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D?
+U 1 1 4C76128D
+P 1975 6125
+F 0 "D?" V 1925 6175 35  0000 C CNN
+F 1 "GREEN" V 2025 6125 35  0000 C CNN
+	1    1975 6125
+	0    1    1    0   
+$EndComp
+Text Label 2825 5800 0    40   ~ 0
+MSP_GREEN
+$Comp
+L GND #PWR?
+U 1 1 4C76126A
+P 2400 6200
+F 0 "#PWR?" H 2400 6200 30  0001 C CNN
+F 1 "GND" H 2400 6130 30  0001 C CNN
+	1    2400 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L REZ R?
+U 1 1 4C761257
+P 2400 6000
+F 0 "R?" H 2400 6050 35  0000 C CNN
+F 1 "REZ" H 2400 5950 35  0000 C CNN
+	1    2400 6000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L REZ R?
+U 1 1 4C76124A
+P 2600 5800
+F 0 "R?" H 2600 5850 35  0000 C CNN
+F 1 "REZ" H 2600 5750 35  0000 C CNN
+	1    2600 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4C76123B
+P 2150 5950
+F 0 "#PWR?" H 2150 5950 30  0001 C CNN
+F 1 "GND" H 2150 5880 30  0001 C CNN
+	1    2150 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 2N7002 Q?
+U 1 1 4C76121E
+P 2175 5725
+F 0 "Q?" H 2300 5775 40  0000 C CNN
+F 1 "2N7002" H 2375 5675 40  0000 C CNN
+	1    2175 5725
+	-1   0    0    -1  
+$EndComp
+$Sheet
+S 1150 1800 2200 350 
+U 4C7611DE
+F0 "Czujnik_Wilgotnosci" 60
+F1 "Ink_Reg_Czujn_Wilgotn.sch" 60
+$EndSheet
+$Comp
+L VAA #PWR?
+U 1 1 4C74D78A
+P 2450 3925
+F 0 "#PWR?" H 2450 4125 40  0001 C CNN
+F 1 "VAA" H 2450 4075 40  0000 C CNN
+	1    2450 3925
+	-1   0    0    1   
+$EndComp
+$Comp
+L VAA #PWR?
+U 1 1 4C74D781
+P 1475 3975
+F 0 "#PWR?" H 1475 4175 40  0001 C CNN
+F 1 "VAA" H 1475 4125 40  0000 C CNN
+	1    1475 3975
+	-1   0    0    1   
+$EndComp
+$Comp
+L VAA #PWR?
+U 1 1 4C74D774
+P 1450 5350
+F 0 "#PWR?" H 1450 5550 40  0001 C CNN
+F 1 "VAA" H 1450 5500 40  0000 C CNN
+	1    1450 5350
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 1150 1050 2200 400 
+U 4C74CE73
+F0 "Power_Supply" 60
+F1 "Ink_Regu_Pow_Supp.sch" 60
+$EndSheet
+$Comp
+L REZ R?
+U 1 1 4C74CE28
+P 1650 5425
+F 0 "R?" H 1650 5475 35  0000 C CNN
+F 1 "330" H 1650 5375 35  0000 C CNN
+	1    1650 5425
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D?
+U 1 1 4C74CE27
+P 1975 5425
+F 0 "D?" V 1925 5475 35  0000 C CNN
+F 1 "GREEN" V 2025 5425 35  0000 C CNN
+	1    1975 5425
+	0    1    1    0   
+$EndComp
+Text Notes 1675 3000 0    60   ~ 15
+Interfejs
+Text Label 2250 4950 0    50   ~ 0
+X2
+Text Label 2250 4850 0    50   ~ 0
+X1
+Text Label 2250 4750 0    50   ~ 0
+Y2
+Text Label 2250 4650 0    50   ~ 0
+Y1
+$Comp
+L KLAW-2X2 KLA?
+U 1 1 4C74CD03
+P 1850 4800
+F 0 "KLA?" H 1820 5070 50  0000 C CNN
+F 1 "KLAW-2X2" H 1800 4540 45  0000 C CNN
+	1    1850 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 4C74C94C
+P 5375 6250
+F 0 "#PWR?" H 5375 6350 30  0001 C CNN
+F 1 "VCC" H 5375 6350 30  0000 C CNN
+	1    5375 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4C74C94B
+P 5375 6600
+F 0 "#PWR?" H 5375 6600 30  0001 C CNN
+F 1 "GND" H 5375 6530 30  0001 C CNN
+	1    5375 6600
+	1    0    0    -1  
+$EndComp
+Text Label 5425 6425 0    60   ~ 0
+DQ_2
+$Comp
+L DS18B20 U?
+U 1 1 4C74C94A
+P 5150 6425
+F 0 "U?" H 5150 6575 35  0000 C CNN
+F 1 "DS18B20" V 5050 6425 35  0000 C CNN
+	1    5150 6425
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 4C74C941
+P 5375 5600
+F 0 "#PWR?" H 5375 5700 30  0001 C CNN
+F 1 "VCC" H 5375 5700 30  0000 C CNN
+	1    5375 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4C74C93C
+P 5375 5950
+F 0 "#PWR?" H 5375 5950 30  0001 C CNN
+F 1 "GND" H 5375 5880 30  0001 C CNN
+	1    5375 5950
+	1    0    0    -1  
+$EndComp
+Text Label 5425 5775 0    60   ~ 0
+DQ_1
+NoConn ~ 2075 3875
+NoConn ~ 2000 3875
+NoConn ~ 1925 3875
+NoConn ~ 1850 3875
+$Comp
+L GND #PWR?
+U 1 1 4C74C8F0
+P 1400 3925
+F 0 "#PWR?" H 1400 3925 30  0001 C CNN
+F 1 "GND" H 1400 3855 30  0001 C CNN
+	1    1400 3925
+	1    0    0    -1  
+$EndComp
+Text Label 1775 4200 3    50   ~ 0
+DB4
+Text Label 1550 4200 3    50   ~ 0
+DB7
+Text Label 1625 4200 3    50   ~ 0
+DB6
+Text Label 1700 4200 3    50   ~ 0
+DB5
+Text Label 2150 4200 3    50   ~ 0
+E
+Text Label 2225 4200 3    50   ~ 0
+R/W
+Text Label 2300 4200 3    50   ~ 0
+Rs
+Text Label 2375 4200 0    60   ~ 0
+Vo
+$Comp
+L GND #PWR?
+U 1 1 4C74C751
+P 2525 3925
+F 0 "#PWR?" H 2525 3925 30  0001 C CNN
+F 1 "GND" H 2525 3855 30  0001 C CNN
+	1    2525 3925
+	1    0    0    -1  
+$EndComp
+$Comp
+L LCD U?
+U 1 1 4C7225E3
+P 1975 3500
+F 0 "U?" H 1575 3775 60  0000 C CNN
+F 1 "LCD" H 2225 3775 60  0000 C CNN
+	1    1975 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4C7225C6
+P 8075 4350
+F 0 "#PWR?" H 8075 4350 30  0001 C CNN
+F 1 "GND" H 8075 4280 30  0001 C CNN
+	1    8075 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 4C7225B5
+P 8075 4125
+F 0 "#PWR?" H 8075 4225 30  0001 C CNN
+F 1 "VCC" H 8075 4225 30  0000 C CNN
+	1    8075 4125
+	0    -1   -1   0   
+$EndComp
+Text Label 8075 4025 2    45   ~ 0
+TEST
+Text Label 8075 4625 2    45   ~ 0
+RESET
+Text Label 9525 4325 0    45   ~ 0
+TCK
+Text Label 9525 4225 0    45   ~ 0
+TMS
+Text Label 9525 4125 0    45   ~ 0
+TDI
+Text Label 9525 4025 0    45   ~ 0
+TDO
+NoConn ~ 9700 1850
+Text Label 9825 1750 0    45   ~ 0
+TEST
+NoConn ~ 9700 1950
+NoConn ~ 9700 2050
+NoConn ~ 9700 2150
+NoConn ~ 9450 2150
+$Comp
+L GND #PWR?
+U 1 1 4C7224EC
+P 9375 2225
+F 0 "#PWR?" H 9375 2225 30  0001 C CNN
+F 1 "GND" H 9375 2155 30  0001 C CNN
+	1    9375 2225
+	1    0    0    -1  
+$EndComp
+Text Label 9100 2050 0    45   ~ 0
+RESET
+Text Label 9250 1850 0    45   ~ 0
+TCK
+Text Label 9250 1750 0    45   ~ 0
+TMS
+Text Label 9250 1650 0    45   ~ 0
+TDI
+Text Label 9250 1550 0    45   ~ 0
+TDO
+$Comp
+L CON_2X7 C?
+U 1 1 4C722484
+P 9575 1900
+F 0 "C?" V 9575 1775 35  0000 C CNN
+F 1 "CON_2X7" V 9575 2100 35  0000 C CNN
+	1    9575 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 4C72237F
+P 8750 1000
+F 0 "#PWR?" H 8750 1100 30  0001 C CNN
+F 1 "VCC" H 8750 1100 30  0000 C CNN
+	1    8750 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 4C72237B
+P 8450 1000
+F 0 "#PWR?" H 8450 1100 30  0001 C CNN
+F 1 "VCC" H 8450 1100 30  0000 C CNN
+	1    8450 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4C722373
+P 8750 1300
+F 0 "#PWR?" H 8750 1300 30  0001 C CNN
+F 1 "GND" H 8750 1230 30  0001 C CNN
+	1    8750 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4C722370
+P 8450 1300
+F 0 "#PWR?" H 8450 1300 30  0001 C CNN
+F 1 "GND" H 8450 1230 30  0001 C CNN
+	1    8450 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L CAP3 C?
+U 1 1 4C72235D
+P 8750 1150
+F 0 "C?" V 8675 1150 35  0000 C CNN
+F 1 "4,7u/6,3V" V 8825 1150 35  0000 C CNN
+	1    8750 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L CAP1 C?
+U 1 1 4C72234B
+P 8450 1150
+F 0 "C?" V 8375 1150 35  0000 C CNN
+F 1 "220n" V 8525 1150 35  0000 C CNN
+	1    8450 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L MSP430F21X2-SM U?
+U 1 1 4C722339
+P 8800 4675
+F 0 "U?" H 8800 5425 60  0000 C CNN
+F 1 "MSP430F21X2-SM" H 8800 3925 60  0000 C CNN
+	1    8800 4675
+	1    0    0    -1  
+$EndComp
+$Comp
+L DS18B20 U?
+U 1 1 4C72232A
+P 5150 5775
+F 0 "U?" H 5150 5925 35  0000 C CNN
+F 1 "DS18B20" V 5050 5775 35  0000 C CNN
+	1    5150 5775
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

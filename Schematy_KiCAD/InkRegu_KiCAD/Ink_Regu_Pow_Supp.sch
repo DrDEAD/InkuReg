@@ -1,0 +1,415 @@
+EESchema Schematic File Version 2  date 2010-08-27 00:04:23
+LIBS:power,Moje_Filtry_EMC,Moje_Tyryst_Triack,Moje_ZC_Opto_Triack_Driver,Moje_Tranz_NPN,Moje_TRAFO,Moje_Texas_MSP,Moje_SWITCZE,MOJE_STEROW_TRIAK,Moje_Stabilizatory_U,Moje_Rail_To_Rail,Moje_Optocou,Moje_OPAM,Moje_LCD,Moje_Komparat,Moje_Klawiatura,Moje_GENERAL,Moje_Czujniki_Temp,Moje_CONNECTORY,Moje_Tranz_PNP,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,.\Ink_Regu.cache
+EELAYER 24  0
+EELAYER END
+$Descr A4 11700 8267
+Sheet 4 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	3400 3625 4450 3625
+Connection ~ 7200 2825
+Wire Wire Line
+	7200 2825 7200 2550
+Wire Wire Line
+	6750 2625 6750 2550
+Wire Wire Line
+	7225 3325 7225 3250
+Wire Wire Line
+	7125 4425 7125 4500
+Connection ~ 7225 3250
+Connection ~ 6400 3800
+Wire Wire Line
+	6650 3875 6650 3800
+Wire Wire Line
+	6650 3800 5500 3800
+Connection ~ 5825 3800
+Wire Wire Line
+	6850 4275 6850 4350
+Connection ~ 6125 4150
+Wire Wire Line
+	5575 3950 5575 4150
+Wire Wire Line
+	5200 3800 5125 3800
+Wire Wire Line
+	5125 3800 5125 3550
+Wire Wire Line
+	5125 3550 4900 3550
+Wire Wire Line
+	6750 2825 6600 2825
+Wire Wire Line
+	4900 3400 5200 3400
+Wire Wire Line
+	6750 3250 5500 3250
+Wire Wire Line
+	6400 3250 6400 3325
+Wire Wire Line
+	6950 3375 6950 3450
+Connection ~ 5825 3250
+Wire Wire Line
+	5825 3250 5825 3325
+Wire Wire Line
+	5575 3475 5575 3400
+Wire Wire Line
+	3575 3325 3400 3325
+Wire Wire Line
+	4450 3325 4250 3325
+Wire Wire Line
+	3825 3325 4050 3325
+Wire Wire Line
+	5575 3400 5500 3400
+Wire Wire Line
+	5825 3525 5825 3600
+Wire Wire Line
+	6125 3325 6125 3250
+Connection ~ 6125 3250
+Wire Wire Line
+	6125 3525 6125 3600
+Wire Wire Line
+	7100 3250 7275 3250
+Wire Wire Line
+	6400 3525 6400 3600
+Connection ~ 6400 3250
+Wire Wire Line
+	6950 2950 6950 3025
+Wire Wire Line
+	7100 2825 7275 2825
+Wire Wire Line
+	4900 3325 5025 3325
+Wire Wire Line
+	5025 3325 5025 3250
+Wire Wire Line
+	5025 3250 5200 3250
+Wire Wire Line
+	6400 3800 6400 3875
+Wire Wire Line
+	5825 3800 5825 3875
+Wire Wire Line
+	5575 3950 5500 3950
+Wire Wire Line
+	5825 4150 5825 4075
+Wire Wire Line
+	6125 3800 6125 3875
+Wire Wire Line
+	6125 4150 6125 4075
+Wire Wire Line
+	6400 4150 6400 4075
+Wire Wire Line
+	6600 2825 6600 3250
+Connection ~ 6600 3250
+Wire Wire Line
+	5175 3950 5025 3950
+Wire Wire Line
+	5025 3950 5025 3625
+Wire Wire Line
+	5025 3625 4900 3625
+Connection ~ 5825 4150
+Wire Wire Line
+	5575 4150 6650 4150
+Connection ~ 6400 4150
+Connection ~ 6125 3800
+Wire Wire Line
+	7000 4150 7175 4150
+Wire Wire Line
+	7225 3525 7225 3600
+Wire Wire Line
+	7125 4225 7125 4150
+Connection ~ 7125 4150
+Wire Wire Line
+	6750 2550 6825 2550
+Wire Wire Line
+	7200 2550 7025 2550
+Text GLabel 3400 3625 0    60   Input ~ 0
+SIEC_1
+Text GLabel 3400 3325 0    60   Input ~ 0
+SIEC_1
+$Comp
+L GND #PWR?
+U 1 1 4C761193
+P 6750 2625
+F 0 "#PWR?" H 6750 2625 30  0001 C CNN
+F 1 "GND" H 6750 2555 30  0001 C CNN
+	1    6750 2625
+	1    0    0    -1  
+$EndComp
+$Comp
+L CAP2 C?
+U 1 1 4C761192
+P 6925 2550
+F 0 "C?" H 6925 2625 35  0000 C CNN
+F 1 "1u" H 6925 2475 35  0000 C CNN
+	1    6925 2550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4C761181
+P 7125 4500
+F 0 "#PWR?" H 7125 4500 30  0001 C CNN
+F 1 "GND" H 7125 4430 30  0001 C CNN
+	1    7125 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L CAP2 C?
+U 1 1 4C761180
+P 7125 4325
+F 0 "C?" H 7125 4400 35  0000 C CNN
+F 1 "1u" H 7125 4250 35  0000 C CNN
+	1    7125 4325
+	0    -1   1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4C761178
+P 7225 3600
+F 0 "#PWR?" H 7225 3600 30  0001 C CNN
+F 1 "GND" H 7225 3530 30  0001 C CNN
+	1    7225 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L CAP2 C?
+U 1 1 4C761177
+P 7225 3425
+F 0 "C?" H 7225 3500 35  0000 C CNN
+F 1 "1u" H 7225 3350 35  0000 C CNN
+	1    7225 3425
+	0    -1   1    0   
+$EndComp
+$Comp
+L VEE #PWR?
+U 1 1 4C76116C
+P 7175 4150
+F 0 "#PWR?" H 7175 4350 40  0001 C CNN
+F 1 "VEE" H 7175 4300 40  0000 C CNN
+	1    7175 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4C761151
+P 6650 3875
+F 0 "#PWR?" H 6650 3875 30  0001 C CNN
+F 1 "GND" H 6650 3805 30  0001 C CNN
+	1    6650 3875
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4C76114E
+P 6850 4350
+F 0 "#PWR?" H 6850 4350 30  0001 C CNN
+F 1 "GND" H 6850 4280 30  0001 C CNN
+	1    6850 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L L79XX U?
+U 1 1 4C761118
+P 6825 4150
+F 0 "U?" H 6810 4120 30  0000 C CNN
+F 1 "L79XX" H 6825 4170 30  0000 C CNN
+	1    6825 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L CAP1 C?
+U 1 1 4C7610E4
+P 6400 3975
+F 0 "C?" V 6325 3975 35  0000 C CNN
+F 1 "220n" V 6475 3975 35  0000 C CNN
+	1    6400 3975
+	1    0    0    -1  
+$EndComp
+$Comp
+L CAP1 C?
+U 1 1 4C7610DF
+P 6125 3975
+F 0 "C?" V 6050 3975 35  0000 C CNN
+F 1 "220n" V 6200 3975 35  0000 C CNN
+	1    6125 3975
+	1    0    0    -1  
+$EndComp
+$Comp
+L CAP2 C?
+U 1 1 4C7610DC
+P 5825 3975
+F 0 "C?" H 5825 4050 35  0000 C CNN
+F 1 "470u" H 5825 3900 35  0000 C CNN
+	1    5825 3975
+	0    -1   1    0   
+$EndComp
+$Comp
+L BRG1 B?
+U 1 1 4C7610DB
+P 5350 3875
+F 0 "B?" H 5350 4000 35  0000 C CNN
+F 1 "BRG1" H 5350 3750 35  0000 C CNN
+	1    5350 3875
+	1    0    0    -1  
+$EndComp
+$Comp
+L TRAFO_4 TR?
+U 1 1 4C7610B6
+P 4675 3475
+F 0 "TR?" H 4675 3685 45  0000 C CNN
+F 1 "TRAFO_4" H 4665 3265 45  0000 C CNN
+	1    4675 3475
+	1    0    0    -1  
+$EndComp
+$Comp
+L VAA #PWR?
+U 1 1 4C74D5F6
+P 7275 3250
+F 0 "#PWR?" H 7275 3450 40  0001 C CNN
+F 1 "VAA" H 7275 3400 40  0000 C CNN
+	1    7275 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4C74D5E8
+P 6950 3025
+F 0 "#PWR?" H 6950 3025 30  0001 C CNN
+F 1 "GND" H 6950 2955 30  0001 C CNN
+	1    6950 3025
+	1    0    0    -1  
+$EndComp
+$Comp
+L L78XX U?
+U 1 1 4C74D5E7
+P 6925 2825
+F 0 "U?" H 6925 2900 30  0000 C CNN
+F 1 "LF33" H 6925 2825 30  0000 C CNN
+	1    6925 2825
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4C74D5D3
+P 6400 3600
+F 0 "#PWR?" H 6400 3600 30  0001 C CNN
+F 1 "GND" H 6400 3530 30  0001 C CNN
+	1    6400 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L CAP1 C?
+U 1 1 4C74D5D2
+P 6400 3425
+F 0 "C?" V 6325 3425 35  0000 C CNN
+F 1 "220n" V 6475 3425 35  0000 C CNN
+	1    6400 3425
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 4C74D5C1
+P 7275 2825
+F 0 "#PWR?" H 7275 2925 30  0001 C CNN
+F 1 "VCC" H 7275 2925 30  0000 C CNN
+	1    7275 2825
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4C74D5B0
+P 6950 3450
+F 0 "#PWR?" H 6950 3450 30  0001 C CNN
+F 1 "GND" H 6950 3380 30  0001 C CNN
+	1    6950 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L L78XX U?
+U 1 1 4C74D59F
+P 6925 3250
+F 0 "U?" H 6925 3325 30  0000 C CNN
+F 1 "L7805" H 6925 3250 30  0000 C CNN
+	1    6925 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4C74D591
+P 6125 3600
+F 0 "#PWR?" H 6125 3600 30  0001 C CNN
+F 1 "GND" H 6125 3530 30  0001 C CNN
+	1    6125 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L CAP1 C?
+U 1 1 4C74D585
+P 6125 3425
+F 0 "C?" V 6050 3425 35  0000 C CNN
+F 1 "220n" V 6200 3425 35  0000 C CNN
+	1    6125 3425
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4C74D572
+P 5825 3600
+F 0 "#PWR?" H 5825 3600 30  0001 C CNN
+F 1 "GND" H 5825 3530 30  0001 C CNN
+	1    5825 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4C74D565
+P 5575 3475
+F 0 "#PWR?" H 5575 3475 30  0001 C CNN
+F 1 "GND" H 5575 3405 30  0001 C CNN
+	1    5575 3475
+	1    0    0    -1  
+$EndComp
+$Comp
+L CAP2 C?
+U 1 1 4C74D54B
+P 5825 3425
+F 0 "C?" H 5825 3500 35  0000 C CNN
+F 1 "470u" H 5825 3350 35  0000 C CNN
+	1    5825 3425
+	0    -1   1    0   
+$EndComp
+$Comp
+L BRG1 B?
+U 1 1 4C74D526
+P 5350 3325
+F 0 "B?" H 5350 3450 35  0000 C CNN
+F 1 "BRG1" H 5350 3200 35  0000 C CNN
+	1    5350 3325
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4450 3550
+NoConn ~ 4450 3475
+NoConn ~ 4450 3400
+$Comp
+L SWITCH SW?
+U 1 1 4C74D4DF
+P 4150 3325
+F 0 "SW?" H 4150 3400 35  0000 C CNN
+F 1 "SWITCH" H 4150 3275 35  0000 C CNN
+	1    4150 3325
+	1    0    0    -1  
+$EndComp
+$Comp
+L BEZ F?
+U 1 1 4C74D4C0
+P 3700 3325
+F 0 "F?" H 3700 3375 35  0000 C CNN
+F 1 "BEZ" H 3700 3275 35  0000 C CNN
+	1    3700 3325
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
