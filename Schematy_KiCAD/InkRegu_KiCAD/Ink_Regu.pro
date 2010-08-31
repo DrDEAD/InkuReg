@@ -1,4 +1,4 @@
-update=2010-08-26 23:57:27
+update=2010-08-31 16:17:23
 last_client=eeschema
 [general]
 version=1
@@ -66,7 +66,7 @@ LibName22=led
 LibName23=dip_sockets
 [eeschema]
 version=1
-LibDir=
+LibDir=..\\KiCAD_Library_Modules\\library
 NetFmt=1
 HPGLSpd=20
 HPGLDm=15
@@ -97,6 +97,8 @@ RptLab=1
 SimCmd=
 UseNetN=0
 LabSize=60
+PrintMonochrome=1
+ShowSheetReferenceAndTitleBlock=1
 [eeschema/libraries]
 LibName1=power
 LibName2=Moje_Filtry_EMC
