@@ -120,6 +120,46 @@ static void vprvEpulse(void);
 **===========================================================================
 */
 
+unsigned char ucAlfaLcdInC ( void )
+/*
+**---------------------------------------------------------------------------
+**
+**  Abstract:
+**      User application
+**
+**  Parameters:
+**      None
+**
+**  Returns:
+**      None
+**
+**---------------------------------------------------------------------------
+*/
+{
+    /*
+    **---------------------------------
+    ** Your application code goes here
+    **---------------------------------
+    */
+    unsigned char ucTemp, ucTemp4p;
+    
+	PDIR(LCD_DATA_PORT) &= ~(0x0F<<LCD_DATA);	// DATA - INPUT
+	POUT(LCD_RS_PORT) &= ~(1<<LCD_RS);			// RS = 0
+	POUT(LCD_RW_PORT) |= (1<<LCD_RW);			// RW = 1
+	POUT(LCD_E_PORT) |= (1<<LCD_E);				// E = 1
+	vprvDelay();
+	ucTemp = PIN(LCD_DATA_PORT)<<(4-LCD_DATA);
+	POUT(LCD_E_PORT) &= ~(1<<LCD_E);			// E = 0
+	// Tu mo¿e te¿ potrzebny jest delay?
+	POUT(LCD_E_PORT) |= (1<<LCD_E);				// E = 1
+	vprvDelay();
+	ucTemp4p = PIN(LCD_DATA_PORT)>>LCD_DATA;
+	POUT(LCD_E_PORT) &= ~(1<<LCD_E);			// E = 0
+	ucTemp |= ucTemp4p;							// Ustaw jedynki
+	ucTemp &= ucTemp4p | 0xF0;					// Kasuj zera
+	return(ucTemp);
+} /* ucAlfaLcdInC */
+
 void vAlfaLcdOutC ( unsigned char ucData )
 /*
 **---------------------------------------------------------------------------
@@ -137,21 +177,11 @@ void vAlfaLcdOutC ( unsigned char ucData )
 */
 {
     /*
-    **------------------------------------------------------------------
-    ** Initialise the CPU
-    **------------------------------------------------------------------
-    */
-    /*
-    **-----------------------------
-    ** Initialise used peripherals 
-    **-----------------------------
-    */
-    /*
     **---------------------------------
     ** Your application code goes here
     **---------------------------------
     */
-    PDIR(LCD_DATA_PORT) |= (0x0F<<LCD_DATA);	// DATA - OUTPUT
+	PDIR(LCD_DATA_PORT) |= (0x0F<<LCD_DATA);	// DATA - OUTPUT
 	POUT(LCD_RS_PORT) &= ~(1<<LCD_RS);			// RS = 0
 	POUT(LCD_RW_PORT) &= ~(1<<LCD_RW);			// RW = 0
 	POUT(LCD_DATA_PORT) &= ((ucData>>(4-LCD_DATA))|(0xFF&~(0xF0>>(4-LCD_DATA))));	// Wyzerój zera starszego pó³bajtu
@@ -179,11 +209,6 @@ void vAlfaLcdSetup ( void )
 */
 {
     /*
-    **------------------------------------------------------------------
-    ** Initialise the CPU
-    **------------------------------------------------------------------
-    */
-    /*
     **-----------------------------
     ** Initialise used peripherals 
     **-----------------------------
@@ -192,11 +217,6 @@ void vAlfaLcdSetup ( void )
 	PDIR(LCD_RW_PORT) |= (1<<LCD_RW);		// RW - OUTPUT
 	PDIR(LCD_RS_PORT) |= (1<<LCD_RS);		// RS - OUTPUT
 	POUT(LCD_E_PORT) &= ~(1<<LCD_E);		// E = 0
-    /*
-    **---------------------------------
-    ** Your application code goes here
-    **---------------------------------
-    */
 } /* vAlfaLcdSetup */
 
 /*
