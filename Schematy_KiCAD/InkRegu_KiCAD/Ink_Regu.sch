@@ -1,5 +1,55 @@
-EESchema Schematic File Version 2  date 2010-08-27 00:04:23
-LIBS:power,Moje_Filtry_EMC,Moje_Tyryst_Triack,Moje_ZC_Opto_Triack_Driver,Moje_Tranz_NPN,Moje_TRAFO,Moje_Texas_MSP,Moje_SWITCZE,MOJE_STEROW_TRIAK,Moje_Stabilizatory_U,Moje_Rail_To_Rail,Moje_Optocou,Moje_OPAM,Moje_LCD,Moje_Komparat,Moje_Klawiatura,Moje_GENERAL,Moje_Czujniki_Temp,Moje_CONNECTORY,Moje_Tranz_PNP,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,.\Ink_Regu.cache
+EESchema Schematic File Version 2  date 2010-10-18 23:55:16
+LIBS:power
+LIBS:Moje_Filtry_EMC
+LIBS:Moje_Tyryst_Triack
+LIBS:Moje_ZC_Opto_Triack_Driver
+LIBS:Moje_Tranz_NPN
+LIBS:Moje_TRAFO
+LIBS:Moje_Texas_MSP
+LIBS:Moje_SWITCZE
+LIBS:MOJE_STEROW_TRIAK
+LIBS:Moje_Stabilizatory_U
+LIBS:Moje_Rail_To_Rail
+LIBS:Moje_Optocou
+LIBS:Moje_OPAM
+LIBS:Moje_LCD
+LIBS:Moje_Komparat
+LIBS:Moje_Klawiatura
+LIBS:Moje_GENERAL
+LIBS:Moje_Czujniki_Temp
+LIBS:Moje_CONNECTORY
+LIBS:Moje_Tranz_PNP
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Moje_WatchDog
+LIBS:Ink_Regu-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
@@ -341,7 +391,7 @@ F 1 "GREEN" V 2025 5425 35  0000 C CNN
 	1    1975 5425
 	0    1    1    0   
 $EndComp
-Text Notes 1675 3000 0    60   ~ 15
+Text Notes 1675 3000 0    60   ~ 12
 Interfejs
 Text Label 2250 4950 0    50   ~ 0
 X2
