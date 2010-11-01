@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 update=2010-10-19 00:02:38
+=======
+update=2010-08-31 16:17:23
+>>>>>>> 60b72b3faee9c0902355ecaa313374f41d0828fe
 last_client=eeschema
 [general]
 version=1
@@ -49,7 +53,7 @@ LibName22=led
 LibName23=dip_sockets
 [eeschema]
 version=1
-LibDir=
+LibDir=..\\KiCAD_Library_Modules\\library
 NetFmt=1
 HPGLSpd=20
 HPGLDm=15
