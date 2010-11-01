@@ -108,6 +108,10 @@
 */
 static void vprvDelay(void);
 static void vprvEpulse(void);
+static void vprvOut(unsigned char ucData);
+static unsigned char ucprvIn(void);
+static void vprvSpecialOut(unsigned char ucData);
+static void vprvWaitAccept(void);
 /*
 **===========================================================================
 **  3.6     Internal variables
@@ -141,22 +145,12 @@ unsigned char ucAlfaLcdInC ( void )
     ** Your application code goes here
     **---------------------------------
     */
-    unsigned char ucTemp, ucTemp4p;
+    unsigned char ucTemp;
     
 	PDIR(LCD_DATA_PORT) &= ~(0x0F<<LCD_DATA);	// DATA - INPUT
 	POUT(LCD_RS_PORT) &= ~(1<<LCD_RS);			// RS = 0
 	POUT(LCD_RW_PORT) |= (1<<LCD_RW);			// RW = 1
-	POUT(LCD_E_PORT) |= (1<<LCD_E);				// E = 1
-	vprvDelay();
-	ucTemp = PIN(LCD_DATA_PORT)<<(4-LCD_DATA);
-	POUT(LCD_E_PORT) &= ~(1<<LCD_E);			// E = 0
-	// Tu mo¿e te¿ potrzebny jest delay?
-	POUT(LCD_E_PORT) |= (1<<LCD_E);				// E = 1
-	vprvDelay();
-	ucTemp4p = PIN(LCD_DATA_PORT)>>LCD_DATA;
-	POUT(LCD_E_PORT) &= ~(1<<LCD_E);			// E = 0
-	ucTemp |= ucTemp4p;							// Ustaw jedynki
-	ucTemp &= ucTemp4p | 0xF0;					// Kasuj zera
+	ucTemp = ucprvIn();							// Odczytanie linii 4p
 	return(ucTemp);
 } /* ucAlfaLcdInC */
 
@@ -184,13 +178,35 @@ void vAlfaLcdOutC ( unsigned char ucData )
 	PDIR(LCD_DATA_PORT) |= (0x0F<<LCD_DATA);	// DATA - OUTPUT
 	POUT(LCD_RS_PORT) &= ~(1<<LCD_RS);			// RS = 0
 	POUT(LCD_RW_PORT) &= ~(1<<LCD_RW);			// RW = 0
-	POUT(LCD_DATA_PORT) &= ((ucData>>(4-LCD_DATA))|(0xFF&~(0xF0>>(4-LCD_DATA))));	// Wyzerój zera starszego pó³bajtu
-	POUT(LCD_DATA_PORT) |= ((ucData>>(4-LCD_DATA))&(0xF0>>(4-LCD_DATA)));			// Ustaw jednynki starszego pó³bajtu
-	vprvEpulse();
-	POUT(LCD_DATA_PORT) &= ((ucData<<(LCD_DATA))|(0xFF&~(0x0F<<(LCD_DATA))));		// Wyzerój zera m³odszego pó³bajtu
-	POUT(LCD_DATA_PORT) |= ((ucData<<(LCD_DATA))&(0x0F<<(LCD_DATA)));				// Ustaw jednynki m³odszego pó³bajtu
-	vprvEpulse();
+	vprvOut(ucData);							// Zapisanie linii 4p
 } /* vAlfaLcdOutC */
+
+void vAlfaLcdOutD ( unsigned char ucData )
+/*
+**---------------------------------------------------------------------------
+**
+**  Abstract:
+**      User application
+**
+**  Parameters:
+**      None
+**
+**  Returns:
+**      None
+**
+**---------------------------------------------------------------------------
+*/
+{
+    /*
+    **---------------------------------
+    ** Your application code goes here
+    **---------------------------------
+    */
+	PDIR(LCD_DATA_PORT) |= (0x0F<<LCD_DATA);	// DATA - OUTPUT
+	POUT(LCD_RS_PORT) |= (1<<LCD_RS);			// RS = 1
+	POUT(LCD_RW_PORT) &= ~(1<<LCD_RW);			// RW = 0
+	vprvOut(ucData);							// Zapisanie linii 4p
+} /* vAlfaLcdOutD */
 
 void vAlfaLcdSetup ( void )
 /*
@@ -219,22 +235,102 @@ void vAlfaLcdSetup ( void )
 	POUT(LCD_E_PORT) &= ~(1<<LCD_E);		// E = 0
 } /* vAlfaLcdSetup */
 
+void vAlfaLcdInit ( void )
+/*
+**---------------------------------------------------------------------------
+**
+**  Abstract:
+**      User application
+**
+**  Parameters:
+**      None
+**
+**  Returns:
+**      None
+**
+**---------------------------------------------------------------------------
+*/
+{
+    /*
+    **---------------------------------
+    ** Your application code goes here
+    **---------------------------------
+    */
+	vprvSpecialOut(0x20);
+	vprvWaitAccept();
+} /* vAlfaLcdInit */
+
 /*
 **===========================================================================
 **  5.      INTERNAL FUNCTIONS (declared in Section 3.5)
 **===========================================================================
 */
+/* Delay wymagany przez sterownik LCD */
 static void vprvDelay(void)
 {
 	asm ("	nop");
-}
+}/* vprvDelay */
 
+/* Impuls L-H-L na linii E */
 static void vprvEpulse(void)
 {
 	POUT(LCD_E_PORT) |= (1<<LCD_E);			// E = 1
 	vprvDelay();
 	POUT(LCD_E_PORT) &= ~(1<<LCD_E);		// E = 0
-}
+}/* vprvEpulse */
+
+/* Wystawienie pó³bajtów na liniê danych */
+static void vprvOut(unsigned char ucData)
+{
+	POUT(LCD_DATA_PORT) &= ((ucData>>(4-LCD_DATA))|(0xFF&~(0xF0>>(4-LCD_DATA))));	// Wyzerój zera starszego pó³bajtu
+	POUT(LCD_DATA_PORT) |= ((ucData>>(4-LCD_DATA))&(0xF0>>(4-LCD_DATA)));			// Ustaw jednynki starszego pó³bajtu
+	vprvEpulse();
+	POUT(LCD_DATA_PORT) &= ((ucData<<(LCD_DATA))|(0xFF&~(0x0F<<(LCD_DATA))));		// Wyzerój zera m³odszego pó³bajtu
+	POUT(LCD_DATA_PORT) |= ((ucData<<(LCD_DATA))&(0x0F<<(LCD_DATA)));				// Ustaw jednynki m³odszego pó³bajtu
+	vprvEpulse();
+}/* vprvOut */
+
+/* Odebranie pó³bajtów z linii danych */
+static unsigned char ucprvIn(void)
+{
+	unsigned char ucTemp, ucTemp4p;
+	POUT(LCD_E_PORT) |= (1<<LCD_E);				// E = 1
+	vprvDelay();
+	ucTemp = PIN(LCD_DATA_PORT)<<(4-LCD_DATA);
+	POUT(LCD_E_PORT) &= ~(1<<LCD_E);			// E = 0
+	// Tu mo¿e te¿ potrzebny jest delay?
+	POUT(LCD_E_PORT) |= (1<<LCD_E);				// E = 1
+	vprvDelay();
+	ucTemp4p = PIN(LCD_DATA_PORT)>>LCD_DATA;
+	POUT(LCD_E_PORT) &= ~(1<<LCD_E);			// E = 0
+	ucTemp |= ucTemp4p;							// Ustaw jedynki
+	ucTemp &= ucTemp4p | 0xF0;					// Kasuj zera
+	return (ucTemp);
+}/* ucprvIn */
+
+/* Do inicjalizacji */
+static void vprvSpecialOut(unsigned char ucData)
+{
+	PDIR(LCD_DATA_PORT) |= (0x0F<<LCD_DATA);	// DATA - OUTPUT
+	POUT(LCD_RS_PORT) &= ~(1<<LCD_RS);			// RS = 0
+	POUT(LCD_RW_PORT) &= ~(1<<LCD_RW);			// RW = 0
+	POUT(LCD_DATA_PORT) &= ((ucData>>(4-LCD_DATA))|(0xFF&~(0xF0>>(4-LCD_DATA))));	// Wyzerój zera starszego pó³bajtu
+	POUT(LCD_DATA_PORT) |= ((ucData>>(4-LCD_DATA))&(0xF0>>(4-LCD_DATA)));			// Ustaw jednynki starszego pó³bajtu
+	vprvEpulse();
+}/* vprvSpecialOut */
+
+/* Czekanie na gotowoœæ */
+static void vprvWaitAccept(void)
+{
+	volatile unsigned char ucStatus;
+	
+	do
+	{
+		ucStatus = ucAlfaLcdInC();
+	}/* do */
+	while ((ucStatus & 0x80) == 0x80);
+}/* WaitAccept */
+		
 /*
 **===========================================================================
 ** END OF FILE

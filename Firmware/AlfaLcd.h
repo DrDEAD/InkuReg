@@ -83,7 +83,8 @@
 extern void vAlfaLcdSetup(void);
 extern void vAlfaLcdOutC(unsigned char ucData);
 extern unsigned char ucAlfaLcdInC(void);
-
+extern void vAlfaLcdOutD(unsigned char ucData);
+extern void vAlfaLcdInit(void);
 
 #endif /* Match the re-definition guard */
 /*
